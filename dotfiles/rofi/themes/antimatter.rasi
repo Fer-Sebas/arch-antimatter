@@ -1,9 +1,8 @@
-
 configuration {
-    font: 							"Iosevka Nerd Font 12";
-    hide-scrollbar: 				true;
-    scroll-method: 					0;
-    click-to-exit: 					true;
+    font: "Iosevka Nerd Font 12";
+    hide-scrollbar: true;
+    scroll-method: 0;
+    click-to-exit: true;
 }
 
 window {
@@ -21,11 +20,13 @@ listview {
     padding: 25px 5px -20px 5px;
     background-color: #010203;
 }
+
 prompt {
     background-color: #010203;
     color: #FFFFFF;
 
 }
+
 entry {
     background-color: #010203;
     color: #FFFFFF;
@@ -39,13 +40,11 @@ element-text {
     color: inherit;
 }
 
-
 element {
     padding: 16px;
     orientation: horizontal;
     children: [ element-text ];
 }
-
 
 element selected {
     background-color: #F0F0F0;
@@ -55,6 +54,4 @@ element selected {
 element normal {
     background-color: #010203;
     color: #888888;
-
 }
-
