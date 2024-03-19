@@ -1,0 +1,60 @@
+
+configuration {
+    font: 							"Iosevka Nerd Font 12";
+    hide-scrollbar: 				true;
+    scroll-method: 					0;
+    click-to-exit: 					true;
+}
+
+window {
+    background-color: #010203;
+    padding: 300px;
+    width: 100%;
+}
+
+inputbar {
+    background-color: #010203;
+    children: [ entry ];
+}
+
+listview {
+    padding: 25px 5px -20px 5px;
+    background-color: #010203;
+}
+prompt {
+    background-color: #010203;
+    color: #FFFFFF;
+
+}
+entry {
+    background-color: #010203;
+    color: #FFFFFF;
+    placeholder: "Type here to search";
+    cursor: pointer;
+    padding: 10px;
+}
+
+element-text {
+    background-color: #FFFFFF00;
+    color: inherit;
+}
+
+
+element {
+    padding: 16px;
+    orientation: horizontal;
+    children: [ element-text ];
+}
+
+
+element selected {
+    background-color: #F0F0F0;
+    color: #000000;
+}
+
+element normal {
+    background-color: #010203;
+    color: #888888;
+
+}
+
