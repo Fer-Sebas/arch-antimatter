@@ -1,0 +1,16 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(1, 2, 3,.75);
+    color: white;
+}
+
+#idle_inhibitor, #clock, #battery, #cpu, #memory, #temperature, #network, #mpd, #pulseaudio {
+    padding: 2px 12px;
+}
