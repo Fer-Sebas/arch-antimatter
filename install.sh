@@ -23,6 +23,14 @@ then
     sudo pacman -S hyprpaper --noconfirm
     printf "\n"
 
+    printf "\e[1;96m%s\e[0m\n%s" "* Throttled"
+    pacman -S throttled --nocomfirm
+    sudo systemctl enable --now throttled.service
+
+    printf "\e[1;96m%s\e[0m\n%s" "* Power Profiles Daemon"
+    sudo pacman -S power-profiles-daemon --noconfirm
+    sudo systemctl enable power-profiles-daemon && sudo systemctl start power-profiles-daemon
+    printf "\n"
 
     printf "\e[1;96m%s\e[0m\n%s" "* Zsh"
     sudo pacman -S zsh --noconfirm
@@ -47,6 +55,15 @@ then
     sudo pacman -S spotify-launcher --noconfirm
     printf "\n"
 
+    printf "\e[1;96m%s\e[0m\n%s" "* Thorium Reader"
+    cd ..
+    git clone https://aur.archlinux.org/thorium-reader.git
+    cd thorium-reader
+    makepkg -si
+    cd ..
+    sudo rm -r thorium-reader
+    printf "\n"
+
     # Dev Dependencies
 
     printf "\e[1;96m%s\e[0m\n%s" "* Docker"
@@ -55,13 +72,14 @@ then
     printf "\e[1;96m%s\e[0m\n%s" "* Node/NPM"
     sudo pacman -S nodejs --noconfirm
     sudo pacman -S npm --noconfirm
+    sudo pacman -S nvm --noconfirm
 
     printf "\e[1;96m%s\e[0m\n%s" "* VS Code"
-    cd ..
     git clone https://aur.archlinux.org/visual-studio-code-bin.git
     cd visual-studio-code-bin
     makepkg -si
     cd ..
+    sudo rm -r visual-studio-code-bin
     printf "\n"
 
     printf "\e[1;96m%s\e[0m\n%s" "* Ollama"
