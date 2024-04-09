@@ -11,8 +11,6 @@ printf "\n"
 
 if [ $do_you_wish_to_install = y -o $do_you_wish_to_install = Y ]
 then
-
-    [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
     
     printf "\n"
 
@@ -54,6 +52,7 @@ then
     sudo pacman -S npm --noconfirm
 
     printf "\e[1;96m%s\e[0m\n%s" "* VS Code"
+    cd ..
     git clone https://aur.archlinux.org/visual-studio-code-bin.git
     cd visual-studio-code-bin
     makepkg -si
