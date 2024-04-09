@@ -27,6 +27,11 @@ then
     printf "\e[1;96m%s\e[0m\n%s" "* Zsh"
     sudo pacman -S zsh --noconfirm
     printf "\n"
+    printf "\n"
+
+    chsh -s $(which zsh)
+    printf "\n"
+    printf "\n"
 
     printf "\e[1;96m%s\e[0m\n%s" "* PulseAudio Volume Control"
     sudo pacman -S pavucontrol --noconfirm
@@ -44,8 +49,8 @@ then
 
     # Dev Dependencies
 
-    git config --global user.email "io@fersebas.com"
-    git config --global user.name "Fer Sebas"
+    printf "\e[1;96m%s\e[0m\n%s" "* Docker"
+    sudo pacman -S docker --noconfirm
 
     printf "\e[1;96m%s\e[0m\n%s" "* Node/NPM"
     sudo pacman -S nodejs --noconfirm
@@ -62,6 +67,9 @@ then
     printf "\e[1;96m%s\e[0m\n%s" "* Ollama"
     curl -fsSL https://ollama.com/install.sh | sh
     printf "\n"
+
+    git config --global user.email "io@fersebas.com"
+    git config --global user.name "Fer Sebas"
 
     printf "${AMBER}\e[1m%s${RESET}%s\n\n" "Environment set up completed."
 
