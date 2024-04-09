@@ -46,6 +46,9 @@ then
 
     # Dev Dependencies
 
+    git config --global user.email "io@fersebas.com"
+    git config --global user.name "Fer Sebas"
+
     printf "\e[1;96m%s\e[0m\n%s" "* Node/NPM"
     sudo pacman -S nodejs --noconfirm
     sudo pacman -S npm --noconfirm
