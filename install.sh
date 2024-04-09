@@ -19,19 +19,10 @@ then
     printf "${AMBER}%s${RESET}%s\n\n" "Installing packages..."
 
 
-
-    printf "\e[1;96m%s\e[0m\n%s" "* Waybar"
-    sudo pacman -S waybar --noconfirm
-    printf "\n"
-
+    # Environment
 
     printf "\e[1;96m%s\e[0m\n%s" "* Hyprpaper"
     sudo pacman -S hyprpaper --noconfirm
-    printf "\n"
-
-
-    printf "\e[1;96m%s\e[0m\n%s" "* Rofi"
-    sudo pacman -S rofi --noconfirm
     printf "\n"
 
 
@@ -39,7 +30,36 @@ then
     sudo pacman -S zsh --noconfirm
     printf "\n"
 
+    printf "\e[1;96m%s\e[0m\n%s" "* PulseAudio Volume Control"
+    sudo pacman -S pavucontrol --noconfirm
+    printf "\n"
 
+    # Productivity Suite
+
+    printf "\e[1;96m%s\e[0m\n%s" "* Obsidian"
+    sudo pacman -S obsidian --noconfirm
+    printf "\n"
+
+    printf "\e[1;96m%s\e[0m\n%s" "* Spotify"
+    sudo pacman -S spotify-launcher --noconfirm
+    printf "\n"
+
+    # Dev Dependencies
+
+    printf "\e[1;96m%s\e[0m\n%s" "* Node/NPM"
+    sudo pacman -S nodejs --noconfirm
+    sudo pacman -S npm --noconfirm
+
+    printf "\e[1;96m%s\e[0m\n%s" "* VS Code"
+    git clone https://aur.archlinux.org/visual-studio-code-bin.git
+    cd visual-studio-code-bin
+    makepkg -si
+    cd ..
+    printf "\n"
+
+    printf "\e[1;96m%s\e[0m\n%s" "* Ollama"
+    curl -fsSL https://ollama.com/install.sh | sh
+    printf "\n"
 
     printf "${AMBER}\e[1m%s${RESET}%s\n\n" "Environment set up completed."
 
