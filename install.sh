@@ -21,6 +21,10 @@ then
 
     printf "\e[1;96m%s\e[0m\n%s" "* Hyprpaper"
     sudo pacman -S hyprpaper --noconfirm
+    mkdir ~/Wallpaper
+    cp ./dotfiles/hyprpaper.conf ~/.config/hypr
+    cp ./wallpaper/wallpaper-regular.jpg ~/Wallpaper
+    cp ./wallpaper/wallpaper-ultra.jpg ~/Wallpaper
     printf "\n"
 
     printf "\e[1;96m%s\e[0m\n%s" "* Throttled"
