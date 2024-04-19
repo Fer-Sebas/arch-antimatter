@@ -63,6 +63,10 @@ then
     sudo pacman -S spotify-launcher --noconfirm
     printf "\n"
 
+    printf "\e[1;96m%s\e[0m\n%s" "* Bitwarden"
+    sudo pacman -S bitwarden --noconfirm
+    printf "\n"
+
     printf "\e[1;96m%s\e[0m\n%s" "* Fonts"
     sudo pacman -S noto-fonts --noconfirm
     sudo pacman -S noto-fonts-cjk --noconfirm
