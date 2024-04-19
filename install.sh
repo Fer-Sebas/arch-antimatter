@@ -31,7 +31,7 @@ then
     printf "\n"
 
     printf "\e[1;96m%s\e[0m\n%s" "* Throttled"
-    pacman -S throttled --noconfirm
+    sudo pacman -S throttled --noconfirm
     sudo systemctl enable --now throttled.service
 
     printf "\e[1;96m%s\e[0m\n%s" "* Power Profiles Daemon"
