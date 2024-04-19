@@ -19,6 +19,9 @@ then
 
     # Environment
 
+    cp ./dotfiles/hyprland.conf ~/.config/hypr
+    printf "Hyprland set up\n\n"
+
     printf "\e[1;96m%s\e[0m\n%s" "* Hyprpaper"
     sudo pacman -S hyprpaper --noconfirm
     mkdir ~/Wallpaper
@@ -28,7 +31,7 @@ then
     printf "\n"
 
     printf "\e[1;96m%s\e[0m\n%s" "* Throttled"
-    pacman -S throttled --nocomfirm
+    pacman -S throttled --noconfirm
     sudo systemctl enable --now throttled.service
 
     printf "\e[1;96m%s\e[0m\n%s" "* Power Profiles Daemon"
@@ -57,15 +60,6 @@ then
 
     printf "\e[1;96m%s\e[0m\n%s" "* Spotify"
     sudo pacman -S spotify-launcher --noconfirm
-    printf "\n"
-
-    printf "\e[1;96m%s\e[0m\n%s" "* Thorium Reader"
-    cd ..
-    git clone https://aur.archlinux.org/thorium-reader.git
-    cd thorium-reader
-    makepkg -si
-    cd ..
-    sudo rm -r thorium-reader
     printf "\n"
 
     # Dev Dependencies
