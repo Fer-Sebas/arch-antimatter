@@ -33,6 +33,7 @@ then
     printf "\e[1;96m%s\e[0m\n%s" "* Throttled"
     sudo pacman -S throttled --noconfirm
     sudo systemctl enable --now throttled.service
+    printf "\n"
 
     printf "\e[1;96m%s\e[0m\n%s" "* Power Profiles Daemon"
     sudo pacman -S power-profiles-daemon --noconfirm
@@ -62,6 +63,13 @@ then
     sudo pacman -S spotify-launcher --noconfirm
     printf "\n"
 
+    printf "\e[1;96m%s\e[0m\n%s" "* Fonts"
+    sudo pacman -S noto-fonts --noconfirm
+    sudo pacman -S noto-fonts-cjk --noconfirm
+    sudo pacman -S noto-fonts-emoji --noconfirm
+    sudo pacman -S ttf-fira-code --noconfirm
+    printf "\n"
+
     # Dev Dependencies
 
     printf "\e[1;96m%s\e[0m\n%s" "* Docker"
@@ -70,7 +78,6 @@ then
     printf "\e[1;96m%s\e[0m\n%s" "* Node/NPM"
     sudo pacman -S nodejs --noconfirm
     sudo pacman -S npm --noconfirm
-    sudo pacman -S nvm --noconfirm
 
     printf "\e[1;96m%s\e[0m\n%s" "* VS Code"
     git clone https://aur.archlinux.org/visual-studio-code-bin.git
